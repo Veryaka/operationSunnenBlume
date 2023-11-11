@@ -217,6 +217,80 @@ input {
     font-size: 20px;
 }
 
+/* ---------------------------------- Section ---------------------------------- */
+.section-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.image-slider {
+    position: relative;
+    width: 640px;
+    height: 426px;
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    background-color: rgba(220, 220, 220, 0.609);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.slide-text h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-text p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-btn {
+    background-color: rgb(151, 151, 151);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slide {
+    clip-path: circle(0% at 0 50%);
+}
+
+.slide.active {
+    clip-path: circle(150% at 0 50%);
+}
+
+.slider-btn.active {
+    background-color: maroon;
+}
+
 /* ---------------------------------- Main Contents ---------------------------------- */
 .main-content {
     display: flex;
@@ -298,6 +372,71 @@ iframe {
     position: fixed;
     /* right: 0; */
 }
+
+/* ---------------------------------- Project.html ---------------------------------- */
+.all-projects {
+    margin-top: 5%;
+}
+ .project-detail{
+    margin: 50px 30px 100px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 136, 255);
+    box-shadow: 2px 2px 5px grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+ }
+ .project-img{
+    margin: 5px;
+ }
+.project-img img{
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+}
+.project-description{
+    margin: 5px;
+}
+.project-description h3{
+    margin: 0 5px 5px;
+    padding: 0;
+    font-size: 23px;
+}
+
+.project-description p{
+    margin: 20px 5px;
+    padding: 0;
+    line-height: 1.8;
+    text-indent: 40px;
+}
+p.project{
+    text-indent: 0;
+}
+.project-link a{
+    color: cadetblue;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+.rocket-container{
+    position: relative;
+}
+.rocket-container img{
+    position: absolute;
+    width: 180px;
+    top: 0;
+    right: 0;
+    transform: translateY(-70%);
+}
+
+.page-title h1{
+    text-align: center;
+    padding: 50 ;
+}
+
+/* ---------------------------------- Abous us.html ---------------------------------- */
+
 
 /* ---------------------------------- Footer ---------------------------------- */
 footer {
@@ -391,7 +530,172 @@ footer {
     color: red;
 }
 
+/*  STYLING CONTACT  */
 .contact-container {
     display: flex;
     justify-content: flex-start;
+    
 }
+.illustration-img{
+    margin: 0px;
+    width: 800px;
+}
+
+.contact{
+    display: inline-block;
+    margin:  10px 30px;
+    text-align: center;
+}
+ .profile-contact-img{
+    width: 200px;
+ }
+
+ .form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ }
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.icon{
+    margin-right: 6px;
+}
+
+.fa-user,
+.fa-map-marker-alr,
+.fa-envelope-open,
+.fa-comment{
+    font-size: 27px;
+}
+
+.form-label{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+}
+ .form-input{
+    position: relative;
+    width: 100%;
+    border-bottom: 1 px solid grey;
+    outline: none;
+    height: 48px;
+    margin-bottom: 15px;
+    padding: 0;
+ }
+
+ .input-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    height: 100%;
+ }
+
+ .textarea-container{
+    display: flex;
+    justify-content: center;
+ }
+
+ .form-textarea{
+    position: relative;
+ }
+ .textaera{
+    border-style: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    margin-top: 0;
+ }
+
+ .submit{
+    border-style: none;
+    border-radius: 25px;
+    color: aliceblue;
+    background-color: rgb(38, 70, 83);
+    margin: 5px;
+    cursor: pointer;
+ }
+
+ .input-item:focus + .form-label{
+    top: -5px;
+    left: -2px;
+    font-size: 10px;
+ }
+ .textarea:focus + .form-label{
+    top: -5px;
+    left: -2px;
+    font-size: 10px;
+ }
+
+ .input-item:not(:placeholder-shown).input-item:not(:focus) + .form-label{
+    top: -2px;
+    left: -2px;
+    font-size: 10px;
+    color: rgb(138, 130, 130);
+ }
+ .textarea:not(:placeholder-shown).textarea:not(:focus) + .form-label{
+    top: -2px;
+    left: -2px;
+    font-size: 10px;
+    color: rgb(138, 130, 130);
+ }
+
+ /* ------------------------------CONTACT STYLE MODAL */
+ .modal-container {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.411);
+     visibility: hidden;
+     opacity: 0;
+     transition: visibility 1s, opacity 1s;
+ }
+
+ .show {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .modal {
+     width: 600px;
+     height: 400px;
+     position: relative;
+     background-color: white;
+     padding: 35px;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .modal h3 {
+     margin: 0;
+     padding: 0;
+     font-size: 30px;
+ }
+
+ .modal p {
+     margin: 20px 0;
+     padding: 0;
+     font-size: 15px;
+ }
+
+ .modal img {
+     display: block;
+     margin: 0 auto 0 auto;
+     padding: 0;
+     width: 300px;
+ }
